@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<input type="button" value="Kiểm tra" onclick="Nhapsokiemtra()"/>
+<script>
+    function isPrime(number) {
+        if (number == 1)
+            return false;
+        let count=0;
+        for (let i=1;i<=number;i++){
+            let r=number%i
+            if (r==0){
+                count++;
+            }
+        }
+        if (count==2){
+            return true;
+        }
+        else return false;
+    }
+    function Nhapsokiemtra() {
+        let Nhapso = parseInt(prompt("Nhập sô"));
+        let result = isPrime(Nhapso);
+        alert(result);
+    }
+</script>
+</body>
+</html>
